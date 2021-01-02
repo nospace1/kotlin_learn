@@ -116,9 +116,9 @@ fun array(){
 }
 
 // 6. For / While
-fun main(){
-    forAndWith()
-}
+//fun main(){
+//    forAndWith()
+//}
 
 fun forAndWith(){
     val students  = arrayListOf("joyce", "james","jenny", "jennifer")
@@ -157,8 +157,41 @@ fun forAndWith(){
 }
 
 // 7. Nullable / NonNull
+fun main(){
+    nullcheck()
+    ignoreNulls("w")
+}
 
+fun nullcheck(){
+    //NPE : Null pointer Exception
 
+    var name : String = "joyce"
+
+    var nullName : String? = null // 변수값이 null를 넣고 싶으면 type에 ?를 붙이기
+
+    var nameInUpperCase = name.toUpperCase()
+
+    var nullNameInUpperCase = nullName?.toUpperCase() // ? : null 아니면 toUpperCase하고 null이면 null를 반환
+
+    // ?:
+
+    val lastName : String? = null
+
+    val fullName = name + " " + (lastName?: "No lastName") // 엘비스 연산자 : null이면 No lastName 반환 null이 아니면 해당 문자 반환
+    println(fullName)
+
+}
+
+// !! --> 내가 이거 null 아닌거 보증해 줄께!
+fun ignoreNulls(str: String?){
+    val mNotNull : String = str!! // 이건 null 절대 안들어와! 확실할 때만 사용! 지양하길 바람
+    val upper = mNotNull.toUpperCase()
+
+    val email : String? = "joycehong@gmail.com"
+    email?.let { // null이 아니라면 email 변수에 넣어줌
+        println("my email is ${email}")
+    }
+}
 
 
 
