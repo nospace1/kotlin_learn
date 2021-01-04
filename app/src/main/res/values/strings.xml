@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">practice</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_title"> Let&apos;s find out<br />your love type! </string>
+    <string name="question">There were favorite flowers<br />in the flower base.<br />As time goes, the flower<br />have all withered
+    <br />What are you going to do with that?</string>
+
 </resources>
